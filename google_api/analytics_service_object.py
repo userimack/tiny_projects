@@ -35,7 +35,7 @@ def initialize_service():
     http = httplib2.Http()
     credentials = prepare_credentials()
     http = credentials.authorize(http)
-    # Build the Analytics Service Object qith the authorized http object
+    # Build the Analytics Service Object with the authorized http object
     return build('analytics','v3',http=http)
 
 if __name__ == '__main__':
