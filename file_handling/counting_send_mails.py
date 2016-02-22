@@ -23,35 +23,23 @@ for line in fh :
     if not line.startswith('From ') : continue
     words = line.split()
     print 'words: ', words
-    words = words[1].split('@')
-    print 'words: ', words
+    #words = words[1].split('@')
+    #print 'words: ', words
     addr = words[1]
     print 'addr: ', addr
     school[addr] = school.get(addr, 0) + 1
 
 print school
+#max_key=max(school.iterkeys(), key=lambda k: school[k]) #one method
+
+v=list(school.values()) #2nd method
+k=list(school.keys())
+max_key = k[v.index(max(v))]
+
+max_value=school[max_key]
+print max_key , max_value 
 
 
 
-
-# fname = raw_input('Enter file name: ')
-# if len(fname) < 1: fname = 'mbox-short.txt'
-# try:
-#     fhand = open(fname)
-# except:
-#     print 'File', fname, 'cannot be opened.'
-#     exit()
-# hosts = dict()
-# for line in fhand:
-#     print line
-#     if not line.startswith('From ') : continue
-#     atpos = line.find('@')
-#     print 'atpos: ',atpos
-#     sppos = line.find(' ',atpos)
-#     print 'sppos: ',sppos
-#     host = line[atpos+1:sppos]
-#     print 'host: ',host
-#     hosts[host] = hosts.get(host, 0) + 1
-# print hosts 
 
    
