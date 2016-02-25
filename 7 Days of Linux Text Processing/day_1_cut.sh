@@ -20,3 +20,14 @@
 
 
 cut -c3 test.txt
+
+
+#Display the 2nd and 7th character from each line of text.
+#using cut command
+
+cut -c2,7 test.txt
+
+
+# Display a range of characters starting at the 2nd position of a string 
+# and ending at the 7th position (both positions included).
+cut -c2-7 test.txt
