@@ -102,3 +102,9 @@ uniq test_uniq.txt
 #  and line, respectively. There shouldn't be any leading or trailing spaces. 
 #  Please note that the uniq -c command by itself will generate the output in 
 #  a different format than the one expected here. 
+
+uniq -c|xargs -L1
+
+uniq -c|cut -c7-
+
+uniq -c | sed -e 's/^[[:space:]]*//'
