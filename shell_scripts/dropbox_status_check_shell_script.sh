@@ -1,0 +1,1 @@
+while (( 1 < 3 )) ; do dropbox status; sleep 100; done
